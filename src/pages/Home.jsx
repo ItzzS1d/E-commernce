@@ -58,7 +58,7 @@ const Home = () => {
           Lorem Ipsum is simplay dummy text of the priting and typesetting
           industry. Lorem Ipsum has been the.
         </p>
-        <div className="mt-5  md:flex md:justify-center  md:flex-wrap ">
+        <div className="mt-5  md:grid grid-cols-1 md:grid-cols-3  ">
           {products.map((item) => {
             return (
               <div key={item._id}  >
@@ -70,8 +70,8 @@ const Home = () => {
                       onClick={() => handleClick(item._id)}
                       className=" w-full md:w-80 object-cover md:mx-3 md:mt-4"
                     />
-                    <h5 className="mt-2 font-bold text-xl mlt-3">{item.name}</h5>
-                    <p className="font-bold">${item.price}</p>
+                    <h5 className="mt-2 font-bold text-xl ml-3">{item.name}</h5>
+                    <p className="font-bold ml-3">${item.price}</p>
                   </Link>
                 )}
               </div>
